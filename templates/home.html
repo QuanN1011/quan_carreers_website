@@ -9,17 +9,29 @@
             #banner{
                 height: 360px;
                 width: 100%;
+                object-fit: cover;
+                margin-bottom: 16px;
             }
         </style>
     </head>
     <body>
+        {% include 'nav.html' %}
+        <img  class = "img-fluid" id = "banner"src = "http://127.0.0.1:5001/static/banner.jpg" >
         <div class = "container">
             <h1 class = "text-center" mt-2 mb-4> {{company_name}} Careers</h1>
-            <img  class = "img-fluid" id = "banner"src = "http://127.0.0.1:5001/static/banner.jpg" >
-            <h2 class = "text-center mt-2 mb-4">About Quan</h2>
-            <p class = "lead">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-            </p>
+            
+            <div class = "row" style = "margin-bottom: 16px">
+                <div class = "col-md-6">
+                <p class = "lead">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                </p>
+                </div>
+                <div class = "d-none d-md-block col-md-6">
+                    <img src = "/static/pplworking.avif" style = "height: 320px; border-radius: 4px;">
+                </div>
+            </div>
+            <div>
+            
             <h2 class = "text-center mt-2 mb-4">Job Openings</h2>
             <div style = "margin-bottom: 16px">
                 {% for job in jobs %}
@@ -29,8 +41,8 @@
 
             <div class = "text-center">
                 <button class="btn btn-primary btn-lg">Contact Us</button>
-                <p class = "mt-4">Copyright 2025, Quan</p>
             </div>                       
         </div>
+        {% include 'footer.html' %}
     </body>
 </html>
